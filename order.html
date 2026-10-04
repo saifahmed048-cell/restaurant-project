@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Page</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact & Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+
+                <h2>Order Form:</h2>
+                <p>
+                    <label for="customer">Customer Name:</label>
+                    <input id="customer" type="text" name="customer_name" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label>
+                    <input id="phone" type="tel" name="phone_number" required>
+                </p>
+
+                <p>
+                    <label for="delivery_address">Delivery address:</label>
+                    <textarea id="delivery_address" placeholder="Type your address..." minlength="05" maxlength="300"
+                        name="address" required></textarea>
+                </p>
+
+                <p>
+                    <label for="delivery_date">Delivery Date:</label>
+                    <input id="delivery_date" type="date" name="date">
+                </p>
+
+                <p>
+                    <label for="delivery_time">Delivery Time:</label>
+                    <input id="delivery_time" type="time" name="delivery_time">
+                </p>
+
+                <fieldset>
+                    <legend>Menu highlights</legend>
+                    <p>
+                        <label for="menu_items1">Hyderabadi Chicken Biryani</label>
+                        <input id="menu_items1" type="checkbox" name="food[]" value="Hyderabadi_chicken_biryani">
+                    </p>
+
+                    <p>
+                        <label for="menu_items2">Chicken Tikka</label>
+                        <input id="menu_items2" type="checkbox" name="food[]" value="Chicken_tikka">
+                    </p>
+
+                    <p>
+                        <label for="menu_items3">Paneer Tikka</label>
+                        <input id="menu_items3" type="checkbox" name="food[]" value="Paneer_tikkas">
+                    </p>
+
+                    <p>
+                        <label for="menu_items4">Prawn Curry</label>
+                        <input id="menu_items4" type="checkbox" name="food[]" value="Prawn_curry">
+                    </p>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Spice level</legend>
+                    <p>
+                        <label for="spice1">Mild</label>
+                        <input id="spice1" type="radio" name="spice_level" value="mild" required>
+                    </p>
+
+                    <p>
+                        <label for="spice2">Medium</label>
+                        <input id="spice2" type="radio" name="spice_level" value="medium">
+                    </p>
+
+                    <p>
+                        <label for="spice3">Hot</label>
+                        <input id="spice3" type="radio" name="spice_level" value="hot">
+                    </p>
+                </fieldset>
+
+                <p>
+                    <label for="coupon">Coupon Image:</label>
+                    <input id="coupon" type="file" name="coupon_image" accept="image/*">
+                </p>
+
+                <p>
+                    <label for="delivery_instructions">Delivery Instructions:</label>
+                    <textarea id="delivery_instructions" placeholder="eg- after noon" minlength="2" maxlength="100"
+                        name="delivery_instructions"></textarea>
+                </p>
+
+                <div>
+                    <p>
+                        <label for="payment">Payment method:</label>
+                        <select id="payment" name="payment_method" required>
+                            <option value="" selected disabled>Select payment option</option>
+                            <option value="credit_card">Credit card</option>
+                            <option value="debit_card">Debit card</option>
+                            <option value="upi">Upi</option>
+                        </select>
+                    </p>
+                </div>
+
+                <p>
+                    <label for="terms">I agree to terms and conditions</label>
+                    <input id="terms" type="checkbox" name="terms" value="agree_terms_and_conditions" required>
+                </p>
+
+                <p>
+                    <input type="submit" value="submit form">
+                </p>
+
+                <p>
+                    <input type="reset" value="reset">
+                </p>
+
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
